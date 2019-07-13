@@ -1,8 +1,11 @@
 # todo-jquery
 http://witty-baby.surge.sh/
 
-Build
+## Install packages
+`npm install`
+
+## Build
 `npm run build`
 
-Test locally
-Open `dist/index.html` in your browser after build
+## Test locally
+Open `dist/index.html` in your browser
