@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charst="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TODO List app">
+    <meta name="author" content="Yi-Ning">
+    <title>TODO List app</title>
+</head>
+
+<body>
+    <main role="main" class="flex-shrink-0">
+        <div id="container" class="container">
+            <h1 class="mt-5">TODO List App</h1>
+            <p id="stats"></p>
+            <div id="new-todo">
+                <input id="todo-input" type="input" class="form-control" placeholder="Say something...">
+                <button id="add-btn" class="btn btn-primary mt-1">Enter</button>
+            </div>
+            <div class="card mt-2">
+                <ul id="todo" class="list-group list-group-flush">
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script id="item-template" type="text/template">
+        <li data-id={{id}} class="list-group-item">
+            <div class="d-flex flex-row align-items-center">
+                <div class="status p-2">
+                </div>
+                <div class="m-2 flex-grow-1">{{data}}</div>
+                <button type="button" class="toggle btn btn-primary m-2">Mark as Done</button>
+                <button type="button" class="remove btn btn-secondary m-2">Remove</button>
+            </div>
+        </li>
+    </script>
+
+    <script id="pending-template" type="text/template">
+        <span class="badge badge-warning">Pending</span>
+    </script>
+
+    <script id="done-template" type="text/template">
+        <span class="badge badge-success">Done</span>
+    </script>
+
+    <script src="./bundle.js"></script>
+</body>
+
+</html>
